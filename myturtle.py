@@ -1,6 +1,12 @@
 from turtle import *
-shape('turtle')
-speed(5)
+shape('circle')
+speed(10)
+
+
+def turtleSquare(sideLength=100):
+    for i in range(4):
+        forward(sideLength)
+        right(90)
 
 
 def turtleSquares(sideLength=5):
@@ -40,7 +46,8 @@ def turtleStars(sideLength=5):
 
 
 # turtleStar()
-turtleStars()
+# turtleStars()
+turtleSquares()
 # turtleSquares()
 # turtleTriangle()
 # turtlePolygon(10)
