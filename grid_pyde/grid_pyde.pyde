@@ -21,6 +21,17 @@ def draw():
     background(255) # white
     translate(width/2, height/2)
     grid(xscl, yscl)
+    graphFunction()
+    
+def f(x):
+    return 6 * x ** 3 + 31 * x ** 2 + 3 * x - 10
+
+def graphFunction():
+    x = xmin
+    while x <= xmax:
+        fill(0)
+        line(x * xscl, f(x) * yscl, (x + 0.1) * xscl, f(x + 0.1) * yscl)
+        x += 0.1
     
 def grid(xscl, yscl):
 
@@ -37,3 +48,4 @@ def grid(xscl, yscl):
     stroke(0) # black axes
     line(0,ymin*yscl,0,ymax*yscl)
     line(xmin*xscl,0,xmax*xscl,0)
+    
