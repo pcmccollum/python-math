@@ -16,6 +16,20 @@ def multmatrix(a, b):
     return newmatrix
 
 
+def transpose(a):
+    '''Transposes matrix a'''
+    output = []
+    m = len(a)
+    n = len(a[0])
+    # create an n x m matrix
+    for i in range(n):
+        output.append([])
+        for j in range(m):
+            # replace a[i][j] with a[j][i]
+            output[i].append(a[j][i])
+    return output
+
+
 A = [[2, 3], [5, -8]]
 B = [[1, -4], [8, -6]]
 
@@ -41,3 +55,5 @@ print(C)
 
 print(multmatrix(a, b))
 print(multmatrix(a1, b1))
+print(transpose(a))
+print(transpose(b))
